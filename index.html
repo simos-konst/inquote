@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InQuote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-mark">❝</span>
+      <span class="logo-text">InQuote</span>
+    </div>
+    <div class="nav-center">
+      <span class="nav-tag">A curated collection of human thought</span>
+    </div>
+    <div class="nav-controls">
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="Search quotes or authors…" autocomplete="off">
+        <span class="search-icon">⌕</span>
+      </div>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="Wisdom">Wisdom</option>
+        <option value="Life">Life</option>
+        <option value="Philosophy">Philosophy</option>
+        <option value="Motivation">Motivation</option>
+        <option value="Love">Love</option>
+        <option value="Humor">Humor</option>
+      </select>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <h1 class="hero-title">Words that<br><em>endure.</em></h1>
+      <p class="hero-sub">
+        <span id="quote-count">—</span> quotes · <span id="author-count">—</span> authors
+      </p>
+    </header>
+
+    <div id="quotes-grid" class="quotes-grid"></div>
+
+    <div id="no-results" class="no-results hidden">
+      <span class="no-results-icon">∅</span>
+      <p>No quotes found.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>InQuote — static edition</span>
+  </footer>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-quote-mark">❝</div>
+      <p class="modal-text" id="modal-text"></p>
+      <div class="modal-author-block">
+        <span class="modal-dash">—</span>
+        <span class="modal-author" id="modal-author"></span>
+        <span class="modal-category-badge" id="modal-category"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
