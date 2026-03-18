@@ -8,7 +8,7 @@ on:
         docker_image:
           description: 'The Docker image to scan'
           required: true
-          default: 'ghcr.io/simos-konst/InQuote:latest'
+          default: 'ghcr.io/simos-konst/inquote:latest'
 
 # env:
 #   REGISTRY: ghcr.io
